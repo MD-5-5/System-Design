@@ -37,5 +37,5 @@ int main(){
             currentGear = gear;
             cout<< brand<<" "<<model<<" : Shifted to gear"<< currentGear<<endl;
         }
-    }
+    };
 }
