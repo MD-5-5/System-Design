@@ -32,8 +32,16 @@ Objects ke pass kya hota hai
 
 jaise real world mei objects hote hai na....waise hi isme hota hai ki ek bunch of objects hai woh aapas mei initeract ke rhe hai....mtlb kuch objects aapas mei bakchodi kerte hai
 
+Variables => Characters
+Methods => Behaviour
+
 ----------------------------------------------------------
 
 Pillars of OOPs
-1)Abstraction : abstraction hides unneccesary details from a client and showcase only what is necessory
+1)Abstraction : a)abstraction hides unneccesary details from a client and showcase only what is necessory
+                b)Hides the data
+
+2)Encapsulation : a) kuch aise methods ya kuch aise variable objects ke pass rhte hai ager voh bahar agye tho threats cause ker sakte hai.....tho basically it works on Data Security
+                  b) 
+
 
