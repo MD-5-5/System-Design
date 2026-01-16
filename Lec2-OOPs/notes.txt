@@ -21,3 +21,8 @@ History Of Programming :-
                         )Data Security sahi hui
                         )Highly scalable and reusable application build kerna
     
+----------------------------------------------------------------
+
+Objects ke pass kya hota hai
+            )Characteristics
+            )Behaviour
