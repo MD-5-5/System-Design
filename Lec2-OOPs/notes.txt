@@ -1,0 +1,23 @@
+History Of Programming :-
+    pehle chalti thi MACHINE LANGUAGE : (0/1) mei chalti thi
+        isme gadbad kya hai: 1) error prone
+                            2) Tedious
+                            3) Scalabale ❌
+--------------------------------------------------------
+    phir aayi ASSEMBLY LEVEL Languages:
+                    example: MOV A 61H
+                    same disadvantages the iske 
+---------------------------------------------------------
+    phir aayi PROCEDURAL PROGRAMMING : 
+                    -)function 
+                    -)loops
+                    -)blocks
+                    -)
+                kind of reciepe ki bc yeh karo phir yeh
+----------------------------------------------------------
+    phir ayi OOPs : 
+                Kya solve kiya isne ? 
+                        )Real World Modelling
+                        )Data Security sahi hui
+                        )Highly scalable and reusable application build kerna
+    
