@@ -1,0 +1,19 @@
+: Public Car
+        Class Manual Car 
+
+agar main kisi class ko inherit ker rha hu: 
+1) Public: iss car mei jitne public members the  
+2) Private : 
+
+
+
+
+Polymorphism : 
+             Dynamivc Polymorphism => jaise animal run kerta hai..theek..abb maanlo ek DUck hai ek Human hai ek Tiger hai....abb teeno alag alag situation mei alag alag react kerte hai...mtlb run karte hai
+             Static Polymorphism => Abb maanlo ek HUman hai....yaani ek object....aur ek hi method hai run...but situation badal de tho alg behaveior milega
+
+
+             Dynamic Polymorphism => Method OverRiding
+             Static Polymorphism => Method OverLoading
+
+             
