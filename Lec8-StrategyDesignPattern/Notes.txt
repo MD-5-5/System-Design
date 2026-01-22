@@ -1,0 +1,9 @@
+1)Encapsulates what varies and keep it separate from what remains same
+
+2) Solution to inheritance is not more inheritance 
+
+3)Composition should be favoured over inheritance 
+
+4)Code to interface and not to Concretion
+
+5)Do not repeat Yourself (DIY)
