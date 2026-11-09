@@ -1,47 +1,542 @@
-History Of Programming :-
-    pehle chalti thi MACHINE LANGUAGE : (0/1) mei chalti thi
-        isme gadbad kya hai: 1) error prone
-                            2) Tedious
-                            3) Scalabale ❌
---------------------------------------------------------
-    phir aayi ASSEMBLY LEVEL Languages:
-                    example: MOV A 61H
-                    same disadvantages the iske 
----------------------------------------------------------
-    phir aayi PROCEDURAL PROGRAMMING : 
-                    -)function 
-                    -)loops
-                    -)blocks
-                    -)
-                kind of reciepe ki bc yeh karo phir yeh
-----------------------------------------------------------
-    phir ayi OOPs : 
-                Kya solve kiya isne ? 
-                        )Real World Modelling
-                        )Data Security sahi hui
-                        )Highly scalable and reusable application build kerna
-    
-----------------------------------------------------------------
+HISTORY OF PROGRAMMING LANGUAGES
+================================
 
-Objects ke pass kya hota hai
-            )Characteristics
-            )Behaviour
+1. MACHINE LANGUAGE:
+    - Computer ki native language hoti hai.
+    - Binary (0s and 1s) mein instructions likhi jaati hain.
+
+    Disadvantages:
+        1. Error-prone
+        2. Very tedious and difficult to write.
+        3. Difficult to maintain and scale.
+        4. Machine-dependent.
 
 
----------------------------------------------
+2. ASSEMBLY LEVEL LANGUAGE:
+    - Machine language ko thoda human-readable banaya gaya.
+    - Isme mnemonics use hote hain.
 
-jaise real world mei objects hote hai na....waise hi isme hota hai ki ek bunch of objects hai woh aapas mei initeract ke rhe hai....mtlb kuch objects aapas mei bakchodi kerte hai
+    Example:
+        MOV A, 61H
+        ADD A, B
 
-Variables => Characters
-Methods => Behaviour
-
-----------------------------------------------------------
-
-Pillars of OOPs
-1)Abstraction : a)abstraction hides unneccesary details from a client and showcase only what is necessory
-                b)Hides the data
-
-2)Encapsulation : a) kuch aise methods ya kuch aise variable objects ke pass rhte hai ager voh bahar agye tho threats cause ker sakte hai.....tho basically it works on Data Security
-                  b) 
+    Disadvantages:
+        1. Machine-dependent.
+        2. Complex programs likhna difficult.
+        3. Maintenance is difficult.
+        4. Requires knowledge of hardware architecture.
 
 
+3. PROCEDURAL PROGRAMMING:
+    - Isme program ko multiple functions/procedures mein divide kar diya gaya.
+    - Focus was on functions and sequence of instructions.
+
+    Features:
+        1. Functions
+        2. Loops
+        3. Conditional Statements
+        4. Blocks
+        5. Variables
+
+    Basically, ek recipe ki tarah hota hai:
+    Pehle ye karo -> phir ye karo -> phir ye karo.
+
+    Limitations:
+        1. Large applications mein code manage karna difficult ho sakta hai.
+        2. Data aur functions separately manage hote hain.
+        3. Data security comparatively difficult.
+        4. Code reusability and maintenance challenging ho sakti hai.
+
+
+4. OBJECT-ORIENTED PROGRAMMING (OOPs):
+    - OOPs introduced a way to organize software around Objects
+      rather than just functions.
+
+    Kya solve kiya isne?
+
+        1. Real-world modelling.
+        2. Better data organization and encapsulation.
+        3. Code reusability through inheritance.
+        4. Flexibility through polymorphism.
+        5. Easier maintenance of large applications.
+
+    Note:
+    OOPs application ko automatically scalable nahi banata,
+    lekin code organization, maintainability aur reusability
+    improve karne mein help karta hai.
+
+
+------------------------------------------------------------
+
+OBJECTS
+=======
+
+Objects ke paas mainly do cheezein hoti hain:
+
+    1. Characteristics (Properties/Attributes)
+    2. Behaviour (Methods)
+
+Jaise real world mein objects hote hain, waise hi programming
+mein bhi objects hote hain.
+
+Ek bunch of objects aapas mein interact karte hain aur
+application ka kaam complete karte hain.
+
+Example: CAR
+
+    Characteristics:
+        - Brand
+        - Color
+        - Speed
+        - Model
+
+    Behaviour:
+        - Start()
+        - Stop()
+        - Accelerate()
+
+Remember:
+
+    Variables -> Characteristics / Attributes
+    Methods   -> Behaviour
+
+Technically:
+    Object ke data members uski STATE represent karte hain
+    aur methods uska BEHAVIOUR.
+
+
+------------------------------------------------------------
+
+CLASS VS OBJECT
+===============
+
+CLASS:
+    A class is a blueprint or template that defines the
+    properties and behaviours of objects.
+
+OBJECT:
+    An object is an instance of a class that has its own
+    state and can perform defined behaviours.
+
+Example:
+
+    class Car {
+    public:
+        string brand;
+        int speed;
+
+        void start() {
+            cout << "Car Started";
+        }
+    };
+
+    int main() {
+        Car c1;
+
+        c1.brand = "BMW";
+        c1.speed = 100;
+
+        c1.start();
+    }
+
+    Car  -> Class
+    c1   -> Object
+    brand, speed -> Attributes
+    start() -> Method
+
+
+------------------------------------------------------------
+
+PILLARS OF OOPs
+===============
+
+1. ABSTRACTION
+--------------
+
+Definition:
+Abstraction hides unnecessary implementation details from
+the client and showcases only the essential functionality.
+
+Basically, user ko sirf ye pata hona chahiye ki kisi
+functionality ko use kaise karna hai. Internally woh kaise
+work kar rahi hai, ye jaanne ki zaroorat nahi.
+
+Example: ATM Machine
+
+    - User ko amount enter karna hai.
+    - PIN verify karna hai.
+    - Money withdraw karna hai.
+
+Internally bank server, database aur transaction processing
+kaise work kar rahi hai, woh user se hidden hai.
+
+Remember:
+    1. Hides implementation complexity.
+    2. Shows only essential features.
+    3. Focuses on WHAT an object does rather than HOW it does it.
+
+Achieved using:
+    - Abstract Classes
+    - Interfaces (conceptually; C++ uses abstract classes).
+
+
+2. ENCAPSULATION
+----------------
+
+Definition:
+Encapsulation is the process of wrapping data (variables)
+and methods (functions) into a single unit (class) and
+restricting direct access to the internal data.
+
+Basically, kuch variables aur methods aise hote hain jo agar
+directly bahar accessible ho jaayein toh unauthorized
+modification ya misuse ho sakta hai.
+
+Isliye hum ACCESS SPECIFIERS use karte hain.
+
+Example:
+
+    class BankAccount {
+    private:
+        int balance = 1000;
+
+    public:
+        void deposit(int amount) {
+            if(amount > 0) {
+                balance += amount;
+            }
+        }
+
+        int getBalance() {
+            return balance;
+        }
+    };
+
+Here:
+    - balance is private.
+    - Direct modification is restricted.
+    - deposit() provides controlled access.
+    - getBalance() allows reading the balance.
+
+Remember:
+    1. Data Hiding.
+    2. Controlled access to data.
+    3. Bundling of data and methods.
+    4. Achieved using classes and access specifiers.
+
+
+3. INHERITANCE
+--------------
+
+Definition:
+Inheritance is a mechanism in which one class acquires the
+properties and behaviours of another class.
+
+Basically, ek existing class ke features ko reuse karke
+new class create kar sakte hain.
+
+Example:
+
+    class Animal {
+    public:
+        void eat() {
+            cout << "Eating";
+        }
+    };
+
+    class Dog : public Animal {
+    public:
+        void bark() {
+            cout << "Barking";
+        }
+    };
+
+Here:
+    Animal -> Parent/Base Class
+    Dog    -> Child/Derived Class
+
+Dog can access the inherited eat() method.
+
+Advantages:
+    1. Code Reusability.
+    2. Reduces Code Duplication.
+    3. Supports hierarchical relationships.
+
+Types of Inheritance:
+    1. Single Inheritance.
+    2. Multiple Inheritance.
+    3. Multilevel Inheritance.
+    4. Hierarchical Inheritance.
+    5. Hybrid Inheritance.
+
+
+4. POLYMORPHISM
+---------------
+
+Definition:
+Polymorphism means one interface having multiple forms.
+
+Basically, same function or interface different situations
+mein different behaviour show kar sakta hai.
+
+Types of Polymorphism:
+
+A. COMPILE-TIME POLYMORPHISM (STATIC BINDING)
+
+Achieved through:
+    1. Function Overloading.
+    2. Operator Overloading.
+
+Example:
+
+    class Calculator {
+    public:
+        int add(int a, int b) {
+            return a + b;
+        }
+
+        int add(int a, int b, int c) {
+            return a + b + c;
+        }
+    };
+
+Same function name add() but different parameters.
+
+
+B. RUNTIME POLYMORPHISM (DYNAMIC BINDING)
+
+Achieved through:
+    1. Function Overriding.
+    2. Virtual Functions.
+
+Example:
+
+    class Animal {
+    public:
+        virtual void sound() {
+            cout << "Animal Sound";
+        }
+    };
+
+    class Dog : public Animal {
+    public:
+        void sound() override {
+            cout << "Bark";
+        }
+    };
+
+Same function sound() but different implementations.
+
+
+------------------------------------------------------------
+
+IMPORTANT OOPs CONCEPTS
+=======================
+
+1. CONSTRUCTOR:
+
+    A constructor is a special member function that is
+    automatically called when an object is created.
+
+    Features:
+        - Same name as the class.
+        - Has no return type.
+        - Used to initialize objects.
+        - Can be overloaded.
+
+    Types:
+        1. Default Constructor.
+        2. Parameterized Constructor.
+        3. Copy Constructor.
+
+
+2. DESTRUCTOR:
+
+    A destructor is a special member function that is
+    automatically called when an object is destroyed.
+
+    Features:
+        - Same name as the class, preceded by ~.
+        - Has no return type.
+        - Cannot be overloaded.
+        - Used for cleanup and resource management.
+
+
+3. ACCESS SPECIFIERS:
+
+    Access specifiers define the accessibility of class members.
+
+    Types:
+        1. Public:
+           Accessible from anywhere through an accessible object.
+
+        2. Private:
+           Accessible only inside the class and its friends.
+
+        3. Protected:
+           Accessible inside the class, its derived classes
+           and friends.
+
+
+4. STATIC MEMBERS:
+
+    Static members belong to the class rather than individual
+    objects.
+
+    - Only one shared copy of a static data member exists.
+    - Static member functions can directly access static
+      members of the class.
+    - They do not have access to the 'this' pointer.
+
+
+5. FUNCTION OVERLOADING:
+
+    When multiple functions have the same name but different
+    parameter lists, it is called Function Overloading.
+
+    Example:
+        add(int a, int b)
+        add(int a, int b, int c)
+
+
+6. FUNCTION OVERRIDING:
+
+    When a derived class provides its own implementation
+    of a base class function with the same signature,
+    it is called Function Overriding.
+
+    In C++, virtual functions enable runtime polymorphism.
+
+
+7. VIRTUAL FUNCTION:
+
+    A virtual function is a member function declared using
+    the virtual keyword in a base class.
+
+    It allows the derived class to override the function
+    and enables runtime polymorphism through base-class
+    pointers or references.
+
+
+8. FRIEND FUNCTION:
+
+    A friend function is a non-member function that is
+    allowed to access the private and protected members
+    of a class using the friend keyword.
+
+
+------------------------------------------------------------
+
+RELATIONSHIPS BETWEEN OBJECTS
+=============================
+
+1. ASSOCIATION:
+
+    A relationship between two independent objects that
+    interact with each other.
+
+    Example:
+        Teacher and Student.
+
+    Both can exist independently.
+
+
+2. AGGREGATION:
+
+    A weak HAS-A relationship where one object contains
+    or references another object, but both can exist
+    independently.
+
+    Example:
+        Department HAS-A Professor.
+
+    Department delete hone par Professor exist kar sakta hai.
+
+
+3. COMPOSITION:
+
+    A strong HAS-A relationship where the contained object
+    is conceptually dependent on the lifecycle of its owner.
+
+    Example:
+        House HAS-A Room.
+
+    House ke context mein Room ko uska integral part maana
+    jaata hai.
+
+
+------------------------------------------------------------
+
+ABSTRACTION VS ENCAPSULATION
+============================
+
+ABSTRACTION:
+    - Hides implementation details.
+    - Focuses on WHAT.
+    - Reduces complexity.
+    - Achieved using abstract classes and interfaces
+      (in C++ through abstract classes).
+
+ENCAPSULATION:
+    - Bundles data and methods together.
+    - Focuses on controlled access and HOW data is protected.
+    - Protects internal state.
+    - Achieved using classes and access specifiers.
+
+
+------------------------------------------------------------
+
+ADDITIONAL IMPORTANT CONCEPTS
+=============================
+
+1. THIS POINTER:
+
+    'this' is a pointer that stores the address of the
+    current object.
+
+    It is used to access the current object's members.
+
+
+2. COPY CONSTRUCTOR:
+
+    A copy constructor creates a new object by initializing
+    it using an existing object of the same class.
+
+
+3. SHALLOW COPY:
+
+    In shallow copy, member-wise copying takes place.
+    If the class contains pointers, their addresses are
+    copied rather than the actual dynamically allocated data.
+
+    As a result, multiple objects may point to the same memory.
+
+
+4. DEEP COPY:
+
+    In deep copy, a separate memory allocation is created
+    and the actual data is copied.
+
+    Changes made to one object's copied data do not affect
+    the other object's data.
+
+
+5. OBJECT LIFECYCLE:
+
+    Object Creation -> Constructor Call -> Object Usage
+    -> Destructor Call -> Object Destruction
+
+
+------------------------------------------------------------
+
+NEXT LEARNING ORDER
+===================
+
+1. OOPs Fundamentals.
+2. Constructors & Destructors.
+3. Function Overloading & Overriding.
+4. Virtual Functions & Dynamic Binding.
+5. Inheritance Types.
+6. Association, Aggregation & Composition.
+7. Shallow Copy & Deep Copy.
+8. SOLID Principles.
